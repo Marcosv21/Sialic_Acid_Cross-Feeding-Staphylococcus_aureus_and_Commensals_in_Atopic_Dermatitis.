@@ -10,9 +10,9 @@ conda activate diamond
 eval "$(conda shell.bash hook)"
 conda activate diamond
 
-MAGS_DIR="/temporario2/17404478/PRJNA46333_2/assay/gtdb_input_renamed"
+MAGS_DIR="/temporario2/17404478/PRJEB59406/assay_1/gtdb_input_renamed/batch_1"
 
-OUTPUT_DIR="/temporario2/17404478/PRJNA46333_2/assay/mag_annotation"
+OUTPUT_DIR="/temporario2/17404478/PRJEB59406/assay_1/mag_annotation/batch_1"
 PROTEINS_DIR="$OUTPUT_DIR/proteins"
 DIAMOND_OUT="$OUTPUT_DIR/diamond_matches"
 

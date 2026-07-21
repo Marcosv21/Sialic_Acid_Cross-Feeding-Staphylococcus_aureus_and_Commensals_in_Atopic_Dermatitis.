@@ -1,8 +1,8 @@
 #!/bin/bash
 
-BINS_DIR="/temporario2/17404478/PRJNA46333_2/assay/filtered_bins_high_quality"
+BINS_DIR="/temporario2/17404478/PRJEB59406/assay_1/magscot/batch_1/magscot_bins"
 
-OUTPUT="/temporario2/17404478/PRJNA46333_2/mag_sample_mapping.tsv"
+OUTPUT="/temporario2/17404478/PRJEB59406/assay_1/batch_1/mag_sample_mapping.tsv"
 
 echo -e "MAG\tDominant_Sample\tNum_Contigs" > "$OUTPUT"
 
@@ -12,7 +12,7 @@ for bin in "$BINS_DIR"/*.fa; do
 
     SAMPLE_INFO=$(grep "^>" "$bin" \
         | sed 's/^>//' \
-        | cut -d'_' -f1 \
+        | cut -d'k' -f1 \
         | sort \
         | uniq -c \
         | sort -nr \

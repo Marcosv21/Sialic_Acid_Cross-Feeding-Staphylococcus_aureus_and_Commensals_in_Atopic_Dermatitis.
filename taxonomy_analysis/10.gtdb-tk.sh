@@ -6,9 +6,9 @@
 eval "$(conda shell.bash hook)"
 conda activate gtdbtk
 
-SOURCE_BINS_DIR="/temporario2/17404478/PRJNA46333_2/assay/gtdb_input_renamed"
-INPUT_DIR="/temporario2/17404478/PRJNA46333_2/assay/gtdb_input_all_bins"
-OUTPUT_DIR="/temporario2/17404478/PRJNA46333_2/assay/gtdb_taxonomy"
+SOURCE_BINS_DIR="/temporario2/17404478/PRJEB59406/assay_1/gtdb_input_renamed/batch_1"
+INPUT_DIR="/temporario2/17404478/PRJEB59406/assay_1/gtdb_input_all_bins/batch_1"
+OUTPUT_DIR="/temporario2/17404478/PRJEB59406/assay_1/gtdb_taxonomy/batch_1"
 
 # Set GTDB-Tk data path (adjust if necessary) 
 # export GTDBTK_DATA_PATH="/temporario2/17404478/miniconda3/envs/gtdbtk/share/gtdbtk-2.7.2/db"

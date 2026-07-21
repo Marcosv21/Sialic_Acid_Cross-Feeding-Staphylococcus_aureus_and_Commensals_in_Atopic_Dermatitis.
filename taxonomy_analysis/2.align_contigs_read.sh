@@ -8,9 +8,9 @@ eval "$(conda shell.bash hook)"
 conda activate Bowtie2
 
 # Define paths
-FASTQ_PATH="/temporario2/17404478/PRJNA46333_2/assay/cleaned_reads"
-INDEX_PATH="/temporario2/17404478/PRJNA46333_2/assay/indexed_contigs"
-OUTPUT_PATH="/temporario2/17404478/PRJNA46333_2/assay/contigs_reads_aligned"
+FASTQ_PATH="/temporario2/17404478/PRJEB59406/assay_1/cleaned_reads/batch_1"
+INDEX_PATH="/temporario2/17404478/PRJEB59406/assay_1/indexed_contigs/batch_1"
+OUTPUT_PATH="/temporario2/17404478/PRJEB59406/assay_1/contigs_reads_aligned/batch_1"
 
 # Create the output directory if it does not exist
 mkdir -p "$OUTPUT_PATH"

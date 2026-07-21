@@ -16,9 +16,9 @@ conda activate magscott_env
 # =========================
 # PATHS
 # =========================
-BASE="/temporario2/17404478/PRJNA46333_2"
-ASSEMBLY_DIR="$BASE/assay"
-WORKDIR="$BASE/magscot"
+BASE="/temporario2/17404478/PRJEB59406"
+ASSEMBLY_DIR="$BASE/assay_1"
+WORKDIR="$BASE/magscot/batch_1"
 MAGSCOT_SCRIPT="/temporario2/17404478/code/taxonomy_functions/MAGScoT/MAGScoT.R"
 HMM_SOURCE="/temporario2/17404478/code/taxonomy_functions/MAGScoT/hmm"
 
@@ -39,7 +39,7 @@ Rscript -e "libs<-c('digest','funr','optparse','dplyr','tidyr','readr'); \
 echo "Step 1: Concatenating contigs..."
 > "$CONCAT_FASTA"
 
-for f in "$ASSEMBLY_DIR"/megahit_assemblies/*/final.contigs.fa; do
+for f in "$ASSEMBLY_DIR"/megahit_assemblies/batch_1/*/final.contigs.fa; do
     sample=$(basename "$(dirname "$f")")
     echo "  Processing $sample"
     awk -v s="$sample" '
@@ -98,7 +98,7 @@ MAP_FILE="$WORKDIR/bin_mapping.tsv"
 # --- MetaBAT2 ---
 echo "  -> Collecting MetaBAT2 bins..."
 METABAT_COUNT=0
-for f in "$BASE"/assay/MetaBAT2_bins/*/final.contigs.fa.metabat-bins*/*.fa; do
+for f in "$BASE"/assay_1/MetaBAT2_bins/batch_1/*/final.contigs.fa.metabat-bins*/*.fa; do
     [[ -f "$f" ]] || continue
     bin_name=$(basename "$f" .fa)
     sample=$(basename "$(dirname "$(dirname "$f")")")
@@ -113,7 +113,7 @@ echo "     MetaBAT2 bins: $METABAT_COUNT"
 # --- SemiBin2 ---
 echo "  -> Collecting SemiBin2 bins..."
 SEMIBIN_COUNT=0
-for d in "$BASE"/assay/semibin2/final_bins/*/; do
+for d in "$BASE"/assay_1/semibin2/batch_1/final_bins/*/; do
     sample=$(basename "$d")
     [[ -f "$d/contig_bins.tsv" ]] || continue
     awk -v s="$sample" \
@@ -126,7 +126,7 @@ echo "     SemiBin2 samples: $SEMIBIN_COUNT"
 # --- COMEBin ---
 echo "  -> Collecting COMEBin bins..."
 COMEBIN_COUNT=0
-for sample_dir in "$BASE"/assay/comebin_bins/*/; do
+for sample_dir in "$BASE"/assay_1/comebin_bins/batch_1/*/; do
     sample=$(basename "$sample_dir")
     BIN_DIR="$sample_dir/comebin_res/comebin_res_bins"
 

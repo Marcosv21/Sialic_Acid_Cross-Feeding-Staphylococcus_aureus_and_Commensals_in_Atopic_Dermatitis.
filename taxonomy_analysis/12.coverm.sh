@@ -5,9 +5,9 @@ conda activate coverm
 
 # DIRECTORIES
 
-MAG_DIR="/temporario2/17404478/PRJNA46333_2/assay/gtdb_input_renamed"
-READS_DIR="/temporario2/17404478/PRJNA46333_2/assay/cleaned_reads"
-WORK_DIR="/temporario2/17404478/PRJNA46333_2/assay/mag_abundance"
+MAG_DIR="/temporario2/17404478/PRJEB59406/assay_1/gtdb_input_renamed/batch_1"
+READS_DIR="/temporario2/17404478/PRJEB59406/assay_1/cleaned_reads/batch_1"
+WORK_DIR="/temporario2/17404478/PRJEB59406/assay_1/mag_abundance/batch_1"
 
 BAM_DIR="${WORK_DIR}/bam"
 INDEX_DIR="${WORK_DIR}/bowtie2_index"

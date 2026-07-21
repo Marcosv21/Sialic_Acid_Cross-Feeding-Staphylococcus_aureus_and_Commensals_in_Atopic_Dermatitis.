@@ -4,9 +4,9 @@ import shutil
 import glob
 
 
-CHECKM_DIR = "/temporario2/17404478/PRJNA46333_2/assay/checkm_results"
-BINS_DIR = "/temporario2/17404478/PRJNA46333_2/magscot/magscot_bins"
-OUTPUT_DIR = "/temporario2/17404478/PRJNA46333_2/assay/filtered_bins_high_quality"
+CHECKM_DIR = "/temporario2/17404478/PRJEB59406/assay_1/checkm_results/batch_1"
+BINS_DIR = "/temporario2/17404478/PRJEB59406/assay_1/magscot/batch_1/magscot_bins"
+OUTPUT_DIR = "/temporario2/17404478/PRJEB59406/assay_1/filtered_bins_high_quality/batch_1"
 
 # Quality Thresholds (MIMAG Medium)
 #If you want High Quality bins, set MIN_COMP = 90.0 and MAX_CONT = 5.0. High quality bins are suitable for most downstream analyses.

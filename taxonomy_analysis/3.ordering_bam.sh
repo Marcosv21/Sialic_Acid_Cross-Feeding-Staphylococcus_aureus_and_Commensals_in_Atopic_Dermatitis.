@@ -8,9 +8,9 @@ eval "$(conda shell.bash hook)"
 conda activate samtools
 
 # Path to the folder containing .sam files
-SAM_DIR="/temporario2/17404478/PRJNA46333_2/assay/contigs_reads_aligned"
+SAM_DIR="/temporario2/17404478/PRJEB59406/assay_1/contigs_reads_aligned/batch_1"
 # Path to save the sorted .bam files
-OUTPUT_DIR="/temporario2/17404478/PRJNA46333_2/assay/ordened_bams"
+OUTPUT_DIR="/temporario2/17404478/PRJEB59406/assay_1/ordened_bams/batch_1"
 
 mkdir -p $OUTPUT_DIR
 

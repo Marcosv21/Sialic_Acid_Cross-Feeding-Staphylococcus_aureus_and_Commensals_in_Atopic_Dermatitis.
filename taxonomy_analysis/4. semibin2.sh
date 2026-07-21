@@ -6,8 +6,8 @@ conda activate semibin
 # =========================
 # CONFIG
 # =========================
-BASE_DIR="/temporario2/17404478/PRJNA46333_2/assay"
-OUTPUT_DIR="$BASE_DIR/semibin2"
+BASE_DIR="/temporario2/17404478/PRJEB59406/assay_1"
+OUTPUT_DIR="$BASE_DIR/semibin2/batch_1"
 BAM_DIR="$OUTPUT_DIR/realigned_bams"
 TEMP_LINKS="$OUTPUT_DIR/temp_links"
 FEATURE_DIR="$OUTPUT_DIR/features"
@@ -29,9 +29,8 @@ mkdir -p "$BAM_DIR" "$TEMP_LINKS" "$FEATURE_DIR" "$MODEL_DIR" "$FINAL_DIR"
 # STEP 1: CONCATENATE FASTA
 # =========================
 echo "Step 1: Preparing FASTA..."
-
 rm -f "$TEMP_LINKS"/*.fa
-for FOLDER in $BASE_DIR/megahit_assemblies/*; do
+for FOLDER in $BASE_DIR/megahit_assemblies/batch_1/*; do
     if [ -f "$FOLDER/final.contigs.fa" ]; then
         SAMPLE=$(basename "$FOLDER")
         seqkit seq -m $MIN_CONTIG "$FOLDER/final.contigs.fa" > "$TEMP_LINKS/${SAMPLE}.fa"
@@ -62,7 +61,7 @@ bowtie2-build "$FINAL_FASTA" "$OUTPUT_DIR/idx"
 echo "Step 3: Mapping..."
 
 VALID_BAMS=""
-for FOLDER in $BASE_DIR/megahit_assemblies/*; do
+for FOLDER in $BASE_DIR/megahit_assemblies/batch_1/*; do
     SAMPLE=$(basename "$FOLDER")
     READ_DIR=$(dirname "$FOLDER")/../cleaned_reads
 

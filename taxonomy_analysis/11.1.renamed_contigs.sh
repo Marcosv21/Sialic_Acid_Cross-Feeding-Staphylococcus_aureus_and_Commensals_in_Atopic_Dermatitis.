@@ -22,7 +22,6 @@ do
 
     echo "Processing: $f"
 
-    # cria FASTA temporário com headers únicos
     awk -v b="$base" '
     /^>/ {
         gsub(/^>/, "", $0)

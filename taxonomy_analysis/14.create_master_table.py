@@ -3,10 +3,10 @@ import os
 import glob
 import re
 
-GTDB_DIR = "/home/marcos/PRJNA46333/PRJNA46333_2/table/gtdb_taxonomy"
-DIAMOND_DIR = "/home/marcos/PRJNA46333/PRJNA46333_2/table/mag_annotation/diamond_matches"
-DESEQ2_FILE = "/home/marcos/PRJNA46333/PRJNA46333_2/table/deseq2_all_results.tsv"
-OUTPUT_FILE = "/home/marcos/PRJNA46333/PRJNA46333_2/table/master_table_mag_sialidase_gtdb_deseq2.tsv"
+GTDB_DIR = "/home/marcos/PRJEB59406/table/gtdb_taxonomy/batch_*"
+DIAMOND_DIR = "/home/marcos/PRJEB59406/table/mag_annotation/batch_*/diamond_matches"
+DESEQ2_FILE = "/home/marcos/PRJEB59406/table/mag_abundance/deseq2_all_results.tsv"
+OUTPUT_FILE = "/home/marcos/PRJEB59406/table/master_table_mag_sialidase_gtdb_deseq2.tsv"
 
 # FUNCTIONS
 def parse_taxonomy(tax_string):

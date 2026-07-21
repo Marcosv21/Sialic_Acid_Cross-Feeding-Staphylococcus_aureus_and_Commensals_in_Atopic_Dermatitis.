@@ -5,9 +5,9 @@
 eval "$(conda shell.bash hook)"
 conda activate bowtie2
 
-FASTQ_PATH="/temporario2/17404478/PRJNA46333_2/assay/fastp_filtered"
+FASTQ_PATH="/temporario2/17404478/PRJNA46333_2/assay/fastp_filtered/batch_1"
 GENOME_INDEX_PATH="/temporario2/17404478/code/data_base/human_genome/GRCh38_index"
-OUTPUT_PATH="/temporario2/17404478/PRJNA46333_2/assay/bowtie2_aligned"
+OUTPUT_PATH="/temporario2/17404478/PRJNA46333_2/assay/bowtie2_aligned/batch_1"
 
 mkdir -p "$OUTPUT_PATH"
 

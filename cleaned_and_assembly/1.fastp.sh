@@ -7,10 +7,10 @@ eval "$(conda shell.bash hook)"
 conda activate FASTP
 
 # Define paths
-INPUT_DIR="/temporario2/17404478/PRJEB59406/assay_1/renamed_reads"
-OUTPUT_DIR="/temporario2/17404478/PRJEB59406/assay_1/fastp_filtered"
-REPORT_DIR="/temporario2/17404478/PRJEB59406/assay_1/fastp_quality"
-FASTQC_DIR="/temporario2/17404478/PRJEB59406/assay_1/fastqc_results"
+INPUT_DIR="/temporario2/17404478/PRJEB59406/assay_1/renamed_reads/batch_1"
+OUTPUT_DIR="/temporario2/17404478/PRJEB59406/assay_1/fastp_filtered/batch_1"
+REPORT_DIR="/temporario2/17404478/PRJEB59406/assay_1/fastp_quality/batch_1"
+FASTQC_DIR="/temporario2/17404478/PRJEB59406/assay_1/fastqc_results/batch_1"
 
 # Create output directories if they do not exist
 mkdir -p "$OUTPUT_DIR"

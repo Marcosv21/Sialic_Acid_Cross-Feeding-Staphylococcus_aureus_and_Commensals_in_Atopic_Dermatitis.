@@ -6,9 +6,9 @@ eval "$(conda shell.bash hook)"
 conda activate metabat2
 
 # Directories
-MEGAHIT_DIR="/temporario2/17404478/PRJNA46333_2/assay/megahit_assemblies"
-BAM_DIR="/temporario2/17404478/PRJNA46333_2/assay/ordened_bams"
-OUTPUT_DIR="/temporario2/17404478/PRJNA46333_2/assay/MetaBAT2_bins"
+MEGAHIT_DIR="/temporario2/17404478/PRJEB59406/assay_1/megahit_assemblies/batch_1"
+BAM_DIR="/temporario2/17404478/PRJEB59406/assay_1/ordened_bams/batch_1"
+OUTPUT_DIR="/temporario2/17404478/PRJEB59406/assay_1/MetaBAT2_bins/batch_1"
 
 # Create the output directory
 mkdir -p "$OUTPUT_DIR"

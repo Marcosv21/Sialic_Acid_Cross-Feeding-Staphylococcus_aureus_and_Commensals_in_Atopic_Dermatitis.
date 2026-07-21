@@ -2,12 +2,11 @@
 eval "$(conda shell.bash hook)"
 conda activate checkm
 
-BINS_DIR="/temporario2/17404478/PRJNA46333_2/assay/magscot/magscot_bins"
-OUT_DIR="/temporario2/17404478/PRJNA46333_2/assay/checkm_results"
+BINS_DIR="/temporario2/17404478/PRJEB59406/assay_1/magscot/batch_1/magscot_bins"
+OUT_DIR="/temporario2/17404478/PRJEB59406/assay_1/checkm_results/batch_1"
 
 mkdir -p "$OUT_DIR"
 
-# Conta bins
 count_bins=$(ls "$BINS_DIR"/*.fa 2>/dev/null | wc -l)
 
 if [ "$count_bins" -eq 0 ]; then
@@ -17,8 +16,6 @@ fi
 
 echo "Running CheckM on $count_bins MAGScoT-refined bins..."
 
-# Roda lineage_wf em todos os bins de uma vez
-# (MAGScoT já consolidou tudo em um diretório único)
 checkm lineage_wf \
     -t 12 \
     --pplacer_threads 4 \

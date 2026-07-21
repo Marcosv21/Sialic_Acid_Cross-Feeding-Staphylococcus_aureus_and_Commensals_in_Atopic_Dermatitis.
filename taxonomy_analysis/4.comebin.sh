@@ -3,11 +3,11 @@
 eval "$(conda shell.bash hook)"
 conda activate comebin_env
 
-MEGAHIT_DIR="/temporario2/17404478/PRJNA46333_2/assay/megahit_assemblies"
-BAM_DIR="/temporario2/17404478/PRJNA46333_2/assay/ordened_bams"
-OUTPUT_DIR="/temporario2/17404478/PRJNA46333_2/assay/comebin_bins"
+MEGAHIT_DIR="/temporario2/17404478/PRJEB59406/assay_1/megahit_assemblies/batch_1"
+BAM_DIR="/temporario2/17404478/PRJEB59406/assay_1/ordened_bams/batch_1"
+OUTPUT_DIR="/temporario2/17404478/PRJEB59406/assay_1/comebin_bins/batch_1"
 THREADS=20
-MIN_CONTIGS_FOR_COMEBIN=100
+MIN_CONTIGS_FOR_COMEBIN=1000
 
 mkdir -p "$OUTPUT_DIR"
 

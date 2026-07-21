@@ -3,7 +3,7 @@
 eval "$(conda shell.bash hook)"
 conda activate seqkit
 
-WORKDIR="/temporario2/17404478/PRJNA46333_2/magscot"
+WORKDIR="/temporario2/17404478/PRJEB59406/assay_1/magscot/batch_1"
 CONCAT_FASTA="$WORKDIR/all_contigs.fa"
 MAGSCOT_OUT="$WORKDIR/MAGScoT_Final_Atopica.refined.contig_to_bin.out"
 CONTIG_LIST_DIR="$WORKDIR/contig_lists"

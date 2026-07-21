@@ -2,9 +2,9 @@ import os
 import pandas as pd
 import shutil
 
-mapping_file = "/temporario2/17404478/PRJNA46333_2/mag_sample_mapping.tsv"
-source_dir = "/temporario2/17404478/PRJNA46333_2/assay/filtered_bins_high_quality"
-output_dir = "/temporario2/17404478/PRJNA46333_2/assay/gtdb_input_renamed"
+mapping_file = "/temporario2/17404478/PRJEB59406/assay_1/mag_sample_mapping.tsv"
+source_dir = "/temporario2/17404478/PRJEB59406/assay_1/filtered_bins_high_quality/batch_1"
+output_dir = "/temporario2/17404478/PRJEB59406/assay_1/gtdb_input_renamed/batch_1"
 
 os.makedirs(output_dir, exist_ok=True)
 df = pd.read_csv(mapping_file, sep="\t")

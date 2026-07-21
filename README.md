@@ -2,13 +2,13 @@
 
 ---
 
-## FLASH Tools Configuration
-
-To calculate the parameters `-m` (minimum) and `-M` (maximum), use the following formula:
-
-> **Overlap = (2 × Reads) - Fragment**
-
-The minimum overlap (`-m`) is value between 10 or 20 bp, while the maximum overlap (`-M`) is determined by the calculated Overlap.
+### Pipeline Overview:
+- The pipeline is divided into three main steps:
+1. **Cleaning and Assembly:** Quality control, decontamination, and assembly of raw reads
+2. **Taxonomy Analysis:** Taxonomic classification, binning, and functional screening of assembled contigs
+3. **Statistical Analysis:** Generation of plots and statistical summaries
+For study wich use deep RNAseq, advise to use different queues, and merge the results in a final step.
+Be careful: For statistical analysis, in Deseq2, do you need concatenate the results CoverM before processing in Deseq2. For this, you can use the script `13.1.concatenate.py` in the folder `taxonomy_analysis` (process use in PRJEB59406).
 
 ### How to obtain the values:
 
