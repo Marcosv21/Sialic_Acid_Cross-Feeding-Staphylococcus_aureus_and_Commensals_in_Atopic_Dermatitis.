@@ -115,7 +115,6 @@ def main():
     print(f"\nMaster table saved:\n{OUTPUT_FILE}")
     print(f"Total MAGs in final table: {len(df_final)}")
     print(f"Total Unique Species in final table: {df_final['Species'].nunique()}")
-
 # RUN
 if __name__ == "__main__":
     main()
