@@ -66,7 +66,9 @@ graph TD
         Refine --> Tax5[checkm2.sh]:::shell
         Tax5 --> Tax7[gtdb-tk.sh]:::shell
         Tax7 --> Tax8[mag_functional_screening.sh]:::shell
-        Tax8 --> Tax9[create_master_table.py]:::python
+        Tax8 --> Tax9[renamed_mag_abundance.py]:::python
+        Tax8 --> Tax9[renamed_annotation.py]:::python
+        Tax9 --> Tax10[create_master_table.py]:::python
     end
     
     %% --- 3. STATISTICAL ANALYSIS ---
@@ -94,21 +96,16 @@ The pipeline quality-controls and decontaminates reads before assembly.:
 
 1. **Mapping:** `indexing_contigs.sh` (Index Building), `align_contigs_read.sh` (Alignment), `ordering_bam.sh` (BAM Sorting)
 2. **Binning:** `metabat2.sh` (MetaBAT2 Binning), `semibin2.sh` (SemiBin2 Binning), `comebin.sh` (Comebin Binning)
-3. **Refinement:** `MAGScoT.R` (Bin Refinement)
+3. **Refinement:** `MAGScoT.R` (MAGScot refiner)
 4. **Quality Assessment:** `checkm2.sh` (CheckM2)
 5. **Taxonomic Classification:** `gtdb-tk.sh` (GTDB-Tk) 
-
-
-6. **Validation & Contamination Check (CAT/BAT):**
-* `run_bat_pipeline.sh` (Taxonomic Classification via Homology)
-* `merge_bat_results.py` (Aggregate BAT Reports)
-
-
-7. `mag_functional_screening.sh` (Targeted Functional Search)
-8. `create_master_table.py` (Data Aggregation)
+6. **Mag annotation:**`mag_functional_screening.sh` (Targeted Functional Search)
+7. **Taxonomic Quantification:**`coverm.sh` (Reads count)
+8. **Statistical analysis:**`abundance_deseq2_MAGs.r` (Deseq2: package in R language)
+9. **Data Aggregation:**`create_master_table.py` (It can facilitate the tranformation into graphs)
 
 ### 3. Statistical Analysis: 
-- `plots_doc_simple`
+- **Transformation into graphs:**`plots_doc_simple`
 
 
 ## Reference
