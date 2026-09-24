@@ -41,11 +41,15 @@ for MAG in "$MAGS_DIR"/*.fa; do
                    -o "$DIAMOND_OUT/${BIN_NAME}_hits_sial.tsv" \
                    --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore \
                    --sensitive \
+                   --id 40 \
+                   --query-cover 50 \
                    --quiet
                    # -d: Defining Diamond database path
                    # -q: Defining query file
                    # -o: Defining output file
                    # --outfmt 6: Define output format (tabular with specific fields)
+                   # --id 40: Minimum percentage identity for a match
+                   # --query-cover 50: Minimum query coverage for a match
                    # --mid-sensitive: Use mid-sensitive mode (balances speed and sensitivity)
                    # --quiet: Suppress standard output messages
 
