@@ -2,9 +2,9 @@ import pandas as pd
 import glob
 
 # ── CAMINHOS ─────────────────────────────────────────────────────────────────
-GTDB_FILES = glob.glob("/home/marcos/PRJNA489681/table/gtdb_taxonomy/gtdbtk.*.summary.tsv")
-ABUND_FILE = "/home/marcos/PRJNA489681/table/mag_abundance/coverm/mag_abundance_renamed.tsv"
-OUT_FILE   = "/home/marcos/PRJNA489681/table/species_abundance_all.tsv"
+GTDB_FILES = glob.glob("/home/marcos/PRJEB40358/table/gtdb_taxonomy/gtdbtk.*.summary.tsv")
+ABUND_FILE = "/home/marcos/PRJEB40358/table/coverm/mag_abundance_renamed.tsv"
+OUT_FILE   = "/home/marcos/PRJEB40358/table/species_abundance_all.tsv"
 
 # 1. Taxonomy (MAG -> Species) ────────────────────────────────────────────
 df_tax = pd.concat(pd.read_csv(f, sep="\t", usecols=['user_genome', 'classification']) for f in GTDB_FILES)

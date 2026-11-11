@@ -8,7 +8,7 @@ library(DESeq2)
 library(tidyverse)
 
 # Input files
-coverm_file <- "/home/marcos/PRJNA489681/table/species_abundance_all.tsv"
+coverm_file <- "/home/marcos/PRJEB40358/table/species_abundance_all.tsv"
 
 # Load aggregated table
 abund <- read.table(
@@ -35,7 +35,7 @@ counts <- counts[rowSums(counts) > 0, ]
 sample_names <- colnames(counts)
 
 condition <- ifelse(
-  grepl("^HC|HC_|^H_|Control", sample_names),
+  grepl("^HC|HC_|^H_|Control|^AD[0-9]+[a-zA-Z]+$", sample_names),
   "HC",
   "AD"
 )
@@ -76,7 +76,7 @@ sig_res <- res_df %>%
 # Save outputs 
 write.table(
   res_df,
-  "/home/marcos/PRJNA489681/table/deseq2_species_all_results.tsv",
+  "/home/marcos/PRJEB40358/table/deseq2_species_all_results.tsv",
   sep = "\t",
   quote = FALSE,
   row.names = FALSE
@@ -84,12 +84,22 @@ write.table(
 
 write.table(
   sig_res,
-  "/home/marcos/PRJNA489681/table/deseq2_significant_species.tsv",
+  "/home/marcos/PRJEB40358/table/deseq2_significant_species.tsv",
   sep = "\t",
   quote = FALSE,
   row.names = FALSE
 )
 
+# Contagens normalizadas (usadas no Spearman do gráfico)
+norm_counts <- DESeq2::counts(dds, normalized = TRUE)
+
+write.table(
+  norm_counts,
+  "/home/marcos/PRJEB40358/table/normalized_counts_species.tsv",
+  sep = "\t",
+  quote = FALSE,
+  col.names = NA
+)
 # Summary
 cat("DESeq2 finished successfully\n")
 cat("Total Species analyzed:", nrow(res_df), "\n")

@@ -3,11 +3,11 @@ import os
 import glob
 
 # ── 1. PATHS ─────────────────────────────────────────────────────────────────
-GTDB_DIR = "/home/marcos/PRJNA489681/table/gtdb_taxonomy"
-DIAMOND_DIR = "/home/marcos/PRJNA489681/table/mag_annotation (2)/diamond_matches"
-DESEQ2_FILE = "/home/marcos/PRJNA489681/table/deseq2_species_all_results.tsv"
+GTDB_DIR = "/home/marcos/PRJEB40358/table/gtdb_taxonomy"
+DIAMOND_DIR = "/home/marcos/PRJEB40358/table/mag_annotation/diamond_matches"
+DESEQ2_FILE = "/home/marcos/PRJEB40358/table/deseq2_species_all_results.tsv"
 
-OUTPUT_FILE = "/home/marcos/PRJNA489681/table/master_table_mag_sialidase_gtdb_deseq2.tsv"
+OUTPUT_FILE = "/home/marcos/PRJEB40358/table/master_table_mag_sialidase_gtdb_deseq2.tsv"
 
 GENES = ['has_nanH', 'has_nanE', 'has_nanK', 'has_nanA', 'has_nanT']
 
